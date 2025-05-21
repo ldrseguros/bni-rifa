@@ -1,0 +1,25 @@
+// prisma/schema.prisma
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model NumeroRifa {
+  id             Int       @id @default(autoincrement())
+  numero         Int       @unique
+  status         String    @default("disponivel") // disponível, reservado, confirmado
+  nome           String?
+  email          String?
+  telefone       String?
+  dataReserva    DateTime?
+}
+
+model AdminUser {
+  id    Int    @id @default(autoincrement())
+  email String @unique
+  senha String // Armazenar hash da senha, não a senha em texto plano!
+}
