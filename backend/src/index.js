@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 // Middleware para CORS
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: process.env.FRONTEND_URL || "https://bni-rifa.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
