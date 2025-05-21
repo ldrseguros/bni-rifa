@@ -14,9 +14,31 @@ const port = process.env.PORT || 3000;
 // Middleware para CORS
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "https://bni-rifa.vercel.app",
+    origin: function (origin, callback) {
+      // Permitir requisições sem origin (como mobile apps ou ferramentas de API)
+      if (!origin) return callback(null, true);
+
+      // Lista de origens permitidas sem a barra final
+      const allowedOrigins = [
+        "https://bni-rifa.vercel.app",
+        "http://localhost:5173",
+        "http://localhost:8080",
+      ];
+
+      // Verificar origem normalizando - removendo qualquer barra final
+      const normalizedOrigin = origin.endsWith("/")
+        ? origin.slice(0, -1)
+        : origin;
+
+      if (allowedOrigins.includes(normalizedOrigin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Não permitido por CORS"));
+      }
+    },
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
   })
 );
 
