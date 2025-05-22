@@ -2,19 +2,25 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award } from "lucide-react";
 
-// Corrigindo o caminho da imagem para funcionar no deploy da Vercel
-const PRIZE_IMAGE_URL = "/assets/Festa-junina-arraia.webp";
+// Usando dois formatos para garantir compatibilidade
+const PRIZE_IMAGE_URL = "/assets/festa-junina.jpg";
 
 const PrizeBanner: React.FC = () => {
   return (
     <Card className="mb-8 shadow-xl overflow-hidden border-2 border-amber-400/50 bg-gradient-to-br from-red-50 via-amber-50 to-yellow-50 dark:from-neutral-800/30 dark:via-neutral-900/30 dark:to-neutral-800/30">
       <div className="md:flex md:items-stretch">
-        <div className="md:w-2/5 relative">
+        <div className="md:w-2/5 relative h-60 md:h-auto">
           <img
             src={PRIZE_IMAGE_URL}
             alt="Projeto arquitetônico completo de uma sala"
             className="object-cover w-full h-full"
             loading="eager"
+            onError={(e) => {
+              // Fallback para outra imagem se a primeira falhar
+              const target = e.target as HTMLImageElement;
+              target.onerror = null;
+              target.src = "/assets/Festa-junina-arraia.webp";
+            }}
           />
         </div>
         <div className="md:w-3/5 p-6 py-8 md:p-8 flex flex-col justify-center">
