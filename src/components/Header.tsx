@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Ticket, ShieldCheck } from "lucide-react";
-import LogoBNI from "@/assets/Logo_BNI_Branca.svg";
 
 const Header: React.FC = () => {
   return (
     <header className="bg-bni-red text-bni-white p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2 text-2xl font-bold">
+          <span>RIFA BNI</span>
           <Ticket size={30} />
-          <img src={LogoBNI} alt="Logo BNI" className="w-12 h-12" />
         </Link>
         <nav>
           <Link
