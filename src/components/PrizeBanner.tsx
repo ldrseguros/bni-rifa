@@ -2,8 +2,8 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award } from "lucide-react";
 
-// Using a placeholder image from Unsplash. You can replace this URL with an uploaded image.
-const PRIZE_IMAGE_URL = "/src/assets/Festa-junina-arraia.webp";
+// Corrigindo o caminho da imagem para funcionar no deploy da Vercel
+const PRIZE_IMAGE_URL = "/assets/Festa-junina-arraia.webp";
 
 const PrizeBanner: React.FC = () => {
   return (
@@ -13,7 +13,8 @@ const PrizeBanner: React.FC = () => {
           <img
             src={PRIZE_IMAGE_URL}
             alt="Projeto arquitetônico completo de uma sala"
-            className="object-cover w-full h-full min-h-[250px]"
+            className="object-cover w-full h-full"
+            loading="eager"
           />
         </div>
         <div className="md:w-3/5 p-6 py-8 md:p-8 flex flex-col justify-center">
