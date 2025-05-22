@@ -14,7 +14,7 @@ const Header: React.FC = () => {
         <nav>
           <Link
             to="/admin/login"
-            className="hover:bg-red-700 px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-1"
+            className="hover:bg-bni-red hover:text-bni-white text-bni-red px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-1"
           >
             <ShieldCheck size={18} />
             <span>Admin</span> {/* Kept as Admin, common term */}
