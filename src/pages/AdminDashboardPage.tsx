@@ -508,7 +508,7 @@ const AdminDashboardPage: React.FC = () => {
       <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
         <h1 className="text-2xl font-bold flex items-center text-bni-red">
           <Settings className="mr-2" />
-          Painel Administrativo RIFA BNI
+          Painel Administrativo RIFA ÉPICA
         </h1>
         <div className="mt-2 sm:mt-0">
           <Link
@@ -724,7 +724,7 @@ const AdminDashboardPage: React.FC = () => {
       </div>
 
       <footer className="text-center mt-12 text-xs text-gray-500">
-        Painel de Administração RIFA BNI. Para funcionalidades completas e
+        Painel de Administração RIFA ÉPICA. Para funcionalidades completas e
         persistência de dados, a integração com Supabase é altamente
         recomendada.
       </footer>

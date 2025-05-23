@@ -36,7 +36,7 @@ const initialPaymentMethods: PaymentMethod[] = [
 // WhatsApp details
 const WHATSAPP_NUMBER = "5562991712017";
 const WHATSAPP_PRESET_MESSAGE =
-  "Olá, acabei de realizar o pagamento da RIFA para o sorteio BNI!! Vou te enviar o comprovante para confirmar a reserva do meu número!!";
+  "Olá, acabei de realizar o pagamento da RIFA para o sorteio ÉPICO!! Vou te enviar o comprovante para confirmar a reserva do meu número!!";
 
 const statusMap: Record<
   string,
@@ -234,7 +234,7 @@ const Index: React.FC = () => {
           "0"
         )} reservado para ${
           userDetails.fullName
-        }. Siga as instruções de pagamento. Envie o comprovante ao responsável do seu BNI. Em caso de dúvidas, fale com ele diretamente.`,
+        }. Siga as instruções de pagamento. Envie o comprovante ao responsável do seu grupo épico. Em caso de dúvidas, fale com ele diretamente.`,
         duration: 7000,
         action: (
           <Button variant="outline" size="sm" onClick={handleWhatsAppRedirect}>
@@ -291,7 +291,7 @@ const Index: React.FC = () => {
       <main className="flex-grow container mx-auto p-4 md:p-8 pb-24 md:pb-28">
         <div className="text-center mb-6 md:mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-bni-red mb-2">
-            Rifa Digital BNI
+            Rifa Digital Épica
           </h1>
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300">
             Escolha seus números da sorte e participe!
@@ -366,7 +366,7 @@ const Index: React.FC = () => {
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
               Após a reserva, realize o pagamento e envie o comprovante ao
-              responsável do seu grupo BNI. Em caso de dúvidas, fale com ele
+              responsável do seu grupo épico. Em caso de dúvidas, fale com ele
               diretamente.
             </p>
           </div>
@@ -389,8 +389,8 @@ const Index: React.FC = () => {
             <AlertDescription className="text-gray-700 dark:text-gray-300">
               Após escolher seu número, realize o pagamento via Pix na chave
               indicada acima. Em seguida, envie o comprovante e seu número
-              reservado para o responsável pelo seu BNI via Whatsapp, clique no
-              botão a seguir!!
+              reservado para o responsável pelo seu grupo épico via Whatsapp,
+              clique no botão a seguir!!
             </AlertDescription>
           </Alert>
           <Button
@@ -416,8 +416,9 @@ const Index: React.FC = () => {
         )}
       </main>
       <footer className="text-center p-4 bg-gray-800 dark:bg-neutral-950 text-white text-sm fixed bottom-0 left-0 right-0 z-50">
-        Em caso de dúvidas, entre em contato com o responsável do seu grupo BNI.
-        <br />© {new Date().getFullYear()} Equipe Rifa BNI. Todos os direitos
+        Em caso de dúvidas, entre em contato com o responsável do seu grupo
+        ÉPICO.
+        <br />© {new Date().getFullYear()} Equipe Rifa Épica. Todos os direitos
         reservados.
       </footer>
     </div>
