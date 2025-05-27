@@ -332,6 +332,9 @@ const Index: React.FC = () => {
                   key={pm.id}
                   className="p-3 border border-gray-200 dark:border-neutral-700 rounded-md"
                 >
+                  <p className="text-lg font-bold text-bni-red mb-4 md:text-xl">
+                    Valor da Rifa: R$ 15,00
+                  </p>
                   <h3 className="font-semibold text-gray-800 dark:text-gray-100">
                     {pm.name}
                   </h3>
